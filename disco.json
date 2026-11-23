@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "services": {
+    "web": {
+      "port": 3000
+    },
+    "hook:deploy:start:before": {
+      "type": "command",
+      "command": "npx prisma db push --skip-generate"
+    }
+  }
+}
